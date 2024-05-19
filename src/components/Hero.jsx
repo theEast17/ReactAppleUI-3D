@@ -9,7 +9,7 @@ const Hero = () => {
 
   const [videoSrc,setVideoSrc]=useState(window.innerWidth<760?smallHeroVideo:heroVideo)
   useGSAP(()=>{
-    gsap.to('#title',{
+    gsap.to('#iphoneText',{
       opacity:1,
       delay:2
     })
@@ -37,7 +37,7 @@ const Hero = () => {
   return (
     <section className="w-full bg-black nav-height relative">
       <div className="w-full h-5/6 flex-center flex-col">
-        <p id="title" className="hero-title">iPhone15 Pro</p>
+        <p id="iphoneText" className="hero-title">iPhone15 Pro</p>
         <div className="w-9/12 md:w-10/12">
           <video className="pointer-events-none" autoPlay muted key={videoSrc} playsInline={true}>
             <source src={videoSrc} type="video/mp4"/>
